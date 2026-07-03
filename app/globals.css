@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF9EE;
+  color: #111111;
+}
+
+::selection {
+  background-color: #EA0026;
+  color: #FFF9EE;
+}
+
+/* Infinite logo marquee track (duplicated content scrolls seamlessly) */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Ripple effect container for buttons */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple span.ripple {
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
