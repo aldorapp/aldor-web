@@ -33,7 +33,7 @@ export default function Hero() {
           </h1>
           <p className="mt-6 text-lg text-cream/70 max-w-md">
             Food. Groceries. Pharmacy. Fashion. Bill payments. And more —
-            across Nigeria, in minutes.
+            across Lagos, in minutes.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
