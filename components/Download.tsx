@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Download() {
   return (
@@ -19,16 +20,20 @@ export default function Download() {
           Scan the code or find Aldor on the App Store and Google Play.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-          <div className="h-32 w-32 rounded-xl2 bg-white grid grid-cols-4 grid-rows-4 gap-0.5 p-3">
-            {[1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0].map((filled, i) => (
-              <div key={i} className={`${filled ? 'bg-ink' : 'bg-white'} rounded-sm`} />
-            ))}
+          <div className="h-32 w-32 rounded-xl2 bg-white p-3 flex items-center justify-center overflow-hidden">
+            <Image
+              src="/qr-code.png"
+              alt="Scan to download the Aldor app"
+              width={112}
+              height={112}
+              className="h-full w-full object-contain"
+            />
           </div>
           <div className="flex gap-4">
             <a href="#" className="rounded-xl border border-cream/20 px-6 py-3 text-cream text-sm font-semibold hover:bg-cream/10 transition">
               App Store
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.aldor.user" className="rounded-xl border border-cream/20 px-6 py-3 text-cream text-sm font-semibold hover:bg-cream/10 transition">
+            <a href="#" className="rounded-xl border border-cream/20 px-6 py-3 text-cream text-sm font-semibold hover:bg-cream/10 transition">
               Google Play
             </a>
           </div>
