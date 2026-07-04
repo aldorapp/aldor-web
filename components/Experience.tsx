@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import Image from 'next/image';
 
 const features = [
   'Track your delivery in real time',
@@ -21,19 +22,14 @@ export default function Experience() {
           transition={{ duration: 0.7 }}
           className="flex justify-center lg:justify-start order-2 lg:order-1"
         >
-          <div className="relative w-64 h-[520px] rounded-[2.25rem] border-8 border-black bg-white shadow-2xl">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-b-2xl" />
-            <div className="h-full w-full rounded-[1.7rem] overflow-hidden bg-gradient-to-b from-cream to-white p-4 pt-10 flex flex-col gap-3">
-              <div className="h-40 rounded-2xl bg-ink/90 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-cream/40 text-xs">
-                  live map
-                </div>
-                <div className="absolute h-3 w-3 rounded-full bg-primary top-1/2 left-1/3 shadow-[0_0_0_6px_rgba(234,0,38,0.2)]" />
-              </div>
-              <div className="text-sm font-heading font-600 text-ink">Rider is 4 mins away</div>
-              <div className="h-16 rounded-xl bg-white shadow-sm" />
-              <div className="h-16 rounded-xl bg-white shadow-sm" />
-            </div>
+          <div className="relative w-64 h-[520px] rounded-[2.25rem] border-8 border-black bg-white shadow-2xl overflow-hidden">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-b-2xl z-10" />
+            <Image
+              src="/screenshots/tracking.png"
+              alt="Aldor app order tracking screen"
+              fill
+              className="object-cover object-top rounded-[1.7rem]"
+            />
           </div>
         </motion.div>
 

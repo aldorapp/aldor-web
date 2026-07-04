@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -56,28 +57,15 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
           className="relative flex justify-center lg:justify-end"
         >
-          <div className="relative w-[280px] h-[580px] rounded-[2.5rem] border-8 border-black bg-cream shadow-2xl animate-float">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-2xl" />
-            <div className="h-full w-full rounded-[2rem] overflow-hidden bg-cream p-4 flex flex-col gap-3 pt-10">
-              <div className="text-xs font-semibold text-gray">Deliver to</div>
-              <div className="text-sm font-heading font-600 text-ink">Lekki Phase 1, Lagos</div>
-              <div className="mt-2 h-10 rounded-full bg-white shadow-sm" />
-              <div className="mt-3 grid grid-cols-4 gap-2">
-                {['🍔', '🥦', '💊', '👕'].map((e) => (
-                  <div
-                    key={e}
-                    className="aspect-square rounded-xl bg-white shadow-sm flex items-center justify-center text-xl"
-                  >
-                    {e}
-                  </div>
-                ))}
-              </div>
-              <div className="mt-3 h-28 rounded-2xl bg-primary/90 flex items-end p-3">
-                <span className="text-cream text-xs font-semibold">Order Jollof Rice — 12 min</span>
-              </div>
-              <div className="h-20 rounded-2xl bg-white shadow-sm" />
-              <div className="h-20 rounded-2xl bg-white shadow-sm" />
-            </div>
+          <div className="relative w-[280px] h-[580px] rounded-[2.5rem] border-8 border-black bg-cream shadow-2xl animate-float overflow-hidden">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-2xl z-10" />
+            <Image
+              src="/screenshots/browse.png"
+              alt="Aldor app home screen"
+              fill
+              className="object-cover object-top rounded-[2rem]"
+              priority
+            />
           </div>
         </motion.div>
       </div>
