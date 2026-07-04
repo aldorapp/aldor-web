@@ -25,7 +25,7 @@ export default function RiderSection() {
               Earn more. Ride smarter.
             </h2>
             <p className="mt-4 text-gray max-w-md">
-              Join thousands of riders using Aldor to earn flexible income across Nigeria&apos;s biggest cities.
+              Join thousands of riders using Aldor to earn flexible income across cities.
             </p>
             <a
               href="/riders"
