@@ -14,7 +14,7 @@ export default function TrustedBusinesses() {
   return (
     <section className="bg-cream py-14 border-b border-black/5">
       <p className="text-center text-xs font-semibold tracking-widest text-gray uppercase mb-8">
-        Trusted by businesses across Nigeria
+        Trusted by businesses across Lagos
       </p>
       <div className="overflow-hidden">
         <div className="marquee-track gap-16 px-8">
